@@ -1,42 +1,163 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Estilos globales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff; /* Fondo claro */
+  color: #333; /* Color de texto */
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilo para el navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around; /* Espaciado entre los botones */
+  align-items: center;
+  background-color: #3b5998; /* Color de fondo del navbar */
+  padding: 1rem; /* Espaciado interno */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  width: 100%; /* Ocupa todo el ancho de la página */
+  position: fixed; /* Fija el navbar en la parte superior */
+  top: 0; /* Alinea al borde superior */
+  left: 0; /* Alinea al borde izquierdo */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Para el contenido debajo del navbar */
+.main-content {
+  padding-top: 60px; /* Espaciado para evitar que el contenido quede oculto detrás del navbar */
+}
+
+/* Estilo para los botones */
+.boton {
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  background-color: #ffcc00; /* Color de fondo de los botones */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.boton:hover {
+  background-color: #ffd700; /* Color al pasar el mouse */
+}
+
+/* Estilos para el componente Equipo */
+.contenedor_equipo {
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  margin: 20px auto; /* Espaciado vertical entre miembros del equipo */
+  padding: 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  text-align: center; /* Centrar el texto dentro del contenedor */
+  max-width: 600px; /* Ancho máximo para el equipo */
+}
+
+.imagen-equipo {
+  width: 100px; /* Ancho de la imagen */
+  height: 100px; /* Alto de la imagen */
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.contenedor-texto-equipo {
+  display: flex;
+  flex-direction: column; /* Coloca el texto en columna */
+  align-items: center; /* Centra el texto */
+}
+
+.links-equipo a {
+  color: #3b5998; /* Color del enlace */
+  margin: 5px; /* Espaciado entre enlaces */
+  text-decoration: none; /* Sin subrayado */
+  transition: color 0.3s; /* Transición suave para color */
+}
+
+.links-equipo a:hover {
+  color: #1c1c1c; /* Color al pasar el mouse */
+}
+
+/* Estilo para el formulario */
+.formulario {
+  display: flex;
+  flex-direction: column; /* Coloca los campos en columna */
+  margin: 20px auto; /* Margen del formulario */
+  max-width: 400px; /* Ancho máximo del formulario */
+  padding: 20px; /* Espaciado interno */
+  background-color: #ffffff; /* Fondo del formulario */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.formulario input,
+.formulario textarea {
+  margin-bottom: 10px; /* Espaciado entre campos */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde del campo */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.formulario button {
+  padding: 10px;
+  background-color: #3b5998; /* Color del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.formulario button:hover {
+  background-color: #2b4470; /* Color al pasar el mouse */
+}
+
+/* Estilos para las Pokémon Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+  gap: 20px; /* Espacio entre las cards */
+  padding: 20px; /* Espaciado interno */
+  justify-items: center; /* Centra las cards en cada celda */
 }
 
 .card {
-  padding: 2em;
+  background-color: #ffffff; /* Fondo de la card */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  text-align: center; /* Centrar texto */
+  padding: 15px; /* Espaciado interno */
+  transition: transform 0.3s; /* Transición suave */
+  width: 100%; /* Hace que la card ocupe todo el ancho posible */
+  max-width: 200px; /* Ancho máximo de la card */
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+.card img {
+  width: 100%; /* Ancho completo de la card */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 10px; /* Bordes redondeados en la imagen */
+}
+
+.card h3 {
+  font-size: 1.2rem; /* Tamaño del título */
+  margin: 10px 0; /* Espaciado vertical */
+}
+
+/* Estilos para la página de inicio */
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido */
+  padding: 20px; /* Espaciado interno */
+}
+
+.home h1 {
+  text-align: center; /* Centra el título de la página de inicio */
+  margin: 20px 0; /* Margen vertical */
+  font-size: 2rem; /* Tamaño del título */
 }
