@@ -1,163 +1,177 @@
 /* Estilos globales */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f8ff; /* Fondo claro */
-  color: #333; /* Color de texto */
+  background-color: #f0f4f8; /* Fondo más suave */
+  color: #333;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+
+
+/* Espaciado para el contenido debajo del navbar */
+.main-content {
+  padding-top: 80px;
   width: 100%;
 }
 
-/* Estilo para el navbar */
-.navbar {
-  display: flex;
-  justify-content: space-around; /* Espaciado entre los botones */
-  align-items: center;
-  background-color: #3b5998; /* Color de fondo del navbar */
-  padding: 1rem; /* Espaciado interno */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-  width: 100%; /* Ocupa todo el ancho de la página */
-  position: fixed; /* Fija el navbar en la parte superior */
-  top: 0; /* Alinea al borde superior */
-  left: 0; /* Alinea al borde izquierdo */
-  z-index: 1000; /* Asegura que esté sobre otros elementos */
-}
-
-/* Para el contenido debajo del navbar */
-.main-content {
-  padding-top: 60px; /* Espaciado para evitar que el contenido quede oculto detrás del navbar */
-}
-
-/* Estilo para los botones */
+/* Botones */
 .boton {
-  padding: 0.5rem 1rem; /* Espaciado interno */
-  color: white; /* Color del texto */
-  text-decoration: none; /* Sin subrayado */
-  background-color: #ffcc00; /* Color de fondo de los botones */
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s; /* Transición suave */
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #ffcc00;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-decoration: none;
 }
 
 .boton:hover {
-  background-color: #ffd700; /* Color al pasar el mouse */
+  background-color: #ffd700;
 }
 
-/* Estilos para el componente Equipo */
+/* Equipo */
 .contenedor_equipo {
   display: flex;
-  align-items: center; /* Centra el contenido verticalmente */
-  margin: 20px auto; /* Espaciado vertical entre miembros del equipo */
-  padding: 20px; /* Espaciado interno */
-  background-color: #ffffff; /* Fondo blanco */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  text-align: center; /* Centrar el texto dentro del contenedor */
-  max-width: 600px; /* Ancho máximo para el equipo */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
 
 .imagen-equipo {
-  width: 100px; /* Ancho de la imagen */
-  height: 100px; /* Alto de la imagen */
-  border-radius: 50%; /* Hace que la imagen sea circular */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-.contenedor-texto-equipo {
-  display: flex;
-  flex-direction: column; /* Coloca el texto en columna */
-  align-items: center; /* Centra el texto */
+.contenedor-texto-equipo,
+.links-equipo {
+  text-align: center;
 }
 
 .links-equipo a {
-  color: #3b5998; /* Color del enlace */
-  margin: 5px; /* Espaciado entre enlaces */
-  text-decoration: none; /* Sin subrayado */
-  transition: color 0.3s; /* Transición suave para color */
+  color: #3b5998;
+  margin: 5px;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .links-equipo a:hover {
-  color: #1c1c1c; /* Color al pasar el mouse */
+  color: #1c1c1c;
 }
 
-/* Estilo para el formulario */
+/* Formulario */
 .formulario {
   display: flex;
-  flex-direction: column; /* Coloca los campos en columna */
-  margin: 20px auto; /* Margen del formulario */
-  max-width: 400px; /* Ancho máximo del formulario */
-  padding: 20px; /* Espaciado interno */
-  background-color: #ffffff; /* Fondo del formulario */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .formulario input,
 .formulario textarea {
-  margin-bottom: 10px; /* Espaciado entre campos */
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #ccc; /* Borde del campo */
-  border-radius: 5px; /* Bordes redondeados */
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .formulario button {
   padding: 10px;
-  background-color: #3b5998; /* Color del botón */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor al pasar */
-  transition: background-color 0.3s; /* Transición suave */
+  background-color: #3b5998;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .formulario button:hover {
-  background-color: #2b4470; /* Color al pasar el mouse */
+  background-color: #2b4470;
 }
 
-/* Estilos para las Pokémon Cards */
+/* PokeAPI */
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
 .card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
-  gap: 20px; /* Espacio entre las cards */
-  padding: 20px; /* Espaciado interno */
-  justify-items: center; /* Centra las cards en cada celda */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
 .card {
-  background-color: #ffffff; /* Fondo de la card */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-  text-align: center; /* Centrar texto */
-  padding: 15px; /* Espaciado interno */
-  transition: transform 0.3s; /* Transición suave */
-  width: 100%; /* Hace que la card ocupe todo el ancho posible */
-  max-width: 200px; /* Ancho máximo de la card */
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
 }
 
 .card:hover {
-  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  transform: scale(1.05);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #444;
 }
 
 .card img {
-  width: 100%; /* Ancho completo de la card */
-  height: auto; /* Mantiene la proporción */
-  border-radius: 10px; /* Bordes redondeados en la imagen */
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
 }
 
-.card h3 {
-  font-size: 1.2rem; /* Tamaño del título */
-  margin: 10px 0; /* Espaciado vertical */
+.card img:hover {
+  transform: rotate(10deg);
 }
 
-/* Estilos para la página de inicio */
+.card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card p span {
+  font-weight: bold;
+  color: #222;
+}
+
+/* Página de inicio */
 .home {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra el contenido */
-  padding: 20px; /* Espaciado interno */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 80vh;
 }
 
 .home h1 {
-  text-align: center; /* Centra el título de la página de inicio */
-  margin: 20px 0; /* Margen vertical */
-  font-size: 2rem; /* Tamaño del título */
+  font-size: 2rem;
+  margin: 20px 0;
 }

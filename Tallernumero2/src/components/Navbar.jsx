@@ -6,11 +6,11 @@ import Boton from './Boton';
 const Navbar = () => {
   return (
 
-    <nav className='navbar'>
+    <div>
       <Boton text="Inicio" link="/" />
       <Boton text="Lista de Pokémons" link="/pokemon" />
       <Boton text="Añadir Pokémon" link="/addPokemon" />
-    </nav>
+    </div>
   );
 };
 

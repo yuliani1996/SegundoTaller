@@ -1,22 +1,26 @@
-import React from 'react';
-import Navbar from './components/Navbar';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import AddPokemon from './pages/AddPokemon';
 import Pokemon from './pages/Pokemon';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 function App() {
+  const [pokemonList, setPokemonList] = useState([]);
+
+  const addPokemon = (newPokemon) => {
+    setPokemonList([newPokemon, ...pokemonList]);
+  };
+
   return (
     <Router>
-      <div className="app">
-        <Navbar />
-        <div className="main-content"> 
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/addPokemon" component={AddPokemon} />
-            <Route path="/pokemon" component={Pokemon} />
-          </Switch>
-        </div>
+      <div>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pokemon" element={<Pokemon pokemonList={pokemonList} />} />
+          <Route path="/addPokemon" element={<AddPokemon addPokemon={addPokemon} />} />
+        </Routes>
       </div>
     </Router>
   );
